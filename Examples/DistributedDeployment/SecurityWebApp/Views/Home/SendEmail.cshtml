@@ -1,0 +1,26 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@model WebApp.ViewModel.Home.SendEmailViewModel
+@{
+    ViewBag.Title = @Localizer.GetString("Send Email");
+    ViewBag.Description = "Send Email";
+    ViewBag.Keywords = "Send Email";
+}
+<h1>@Localizer.GetString("Send Email")</h1>
+<p>
+    @Localizer.GetString("Enter information in the form below to send an email using Service Bus.")
+</p>
+<div class="text-danger">
+    @Html.ValidationSummary()
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-5 padding-bottom-2x">
+        <form action="/Home/SendEmail" id="sendEmailForm" name="sendEmailForm" method="post">
+            @Html.AntiForgeryToken()
+            <input id="email" name="email" class="form-control" type="email" placeholder="@Localizer.GetString("Email")" required >
+            <input id="subject" name="subject" class="form-control" type="text" placeholder="@Localizer.GetString("Subject")" required >
+            <input id="body" name="body" class="form-control" type="text" placeholder="@Localizer.GetString("Body")" required >
+            <input class="btn btn-primary" type="submit" value="@Localizer.GetString("Send")">
+        </form>
+    </div>
+</div>

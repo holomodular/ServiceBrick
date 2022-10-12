@@ -1,0 +1,11 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
+@{
+    ViewBag.Title = @Localizer.GetString("Send Email Complete");
+    ViewBag.Description = "Send Email Complete";
+    ViewBag.Keywords = "Send Email Complete";
+}
+<h1>@Localizer.GetString("Send Email Complete")</h1>
+<p>
+    @Localizer.GetString("The email has been sent via Service Bus.")
+</p>
+

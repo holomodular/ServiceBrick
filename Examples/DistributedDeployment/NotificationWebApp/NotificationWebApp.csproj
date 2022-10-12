@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="ServiceBrick.Logging.AzureDataTables" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Logging.EntityFrameworkCore" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Logging.MongoDb" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Notification.Api.Controller" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Notification.AzureDataTables" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Notification.EntityFrameworkCore" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Notification.MongoDb" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Security.Member" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.ServiceBus.Azure" Version="1.0.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
