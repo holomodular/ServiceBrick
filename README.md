@@ -4,7 +4,7 @@
 
 SERVICE BRICK is the cornerstone for building microservice foundations.
 This is our official site for defect tracking and source code sharing with our community.
-Visit http://ServiceBrick.com to learn more.
+Visit http://ServiceBrick.com to learn more or to view documentation.
 
 ## Overview
 
@@ -14,8 +14,7 @@ We offer many pre-built services, examples and provide source code so you can bu
 
 ### Examples
 
-Visit our [Examples Page](https://github.com/holomodular/ServiceBrick/blob/main/Examples/README.md) to learn how to build a complete solution in seconds.
-Documentation is available on our website at http://ServiceBrick.com
+Visit our [Examples Page](https://github.com/holomodular/ServiceBrick/blob/main/Examples) to learn how to build a complete solution in seconds.
 
 ### Features
 
