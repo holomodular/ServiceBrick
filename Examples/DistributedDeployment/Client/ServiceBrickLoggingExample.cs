@@ -1,15 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ServiceBrick;
+﻿using Microsoft.Extensions.DependencyInjection;
 using ServiceBrick.Logging.Api;
-using ServiceBrick.Cache.Api;
-using ServiceBrick.Notification.Api;
-using ServiceBrick.Security.Api;
-using Microsoft.Extensions.DependencyInjection;
 using ServiceQuery;
 
 namespace Client

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Example.Api\Example.Api.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interface\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+
+</Project>

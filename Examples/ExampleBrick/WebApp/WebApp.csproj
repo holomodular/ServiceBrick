@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="ServiceBrick.Logging.Api.Controller" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Logging.AzureDataTables" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Logging.EntityFrameworkCore" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Logging.MongoDb" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.Api.Controller" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.AzureDataTables" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.EntityFrameworkCore" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.MongoDb" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.ServiceBus.Azure" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.ServiceBus.InMemory" Version="1.0.20" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Example.Api.Controller\Example.Api.Controller.csproj" />
+    <ProjectReference Include="..\Example.AzureDataTables\Example.AzureDataTables.csproj" />
+    <ProjectReference Include="..\Example.EntityFrameworkCore\Example.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Example.MongoDb\Example.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>

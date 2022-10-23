@@ -8,14 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
-    <PackageReference Include="ServiceBrick.Logging.AzureDataTables" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Logging.EntityFrameworkCore" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Logging.MongoDb" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Security.Api.Controller" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Security.AzureDataTables" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Security.EntityFrameworkCore" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.Security.MongoDb" Version="1.0.16" />
-    <PackageReference Include="ServiceBrick.ServiceBus.Azure" Version="1.0.16" />
+    <PackageReference Include="ServiceBrick.Logging.AzureDataTables" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Logging.EntityFrameworkCore" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Logging.MongoDb" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.Api.Controller" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.AzureDataTables" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.EntityFrameworkCore" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.Security.MongoDb" Version="1.0.20" />
+    <PackageReference Include="ServiceBrick.ServiceBus.Azure" Version="1.0.20" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 

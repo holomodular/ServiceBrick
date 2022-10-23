@@ -14,14 +14,14 @@ namespace WebApp.Controllers
     public class HomeController : Controller
     {
         private readonly IBusinessRuleService _businessRuleService;
-        private readonly IUserManagerApiService _userManagerApiService;
+        private readonly IUserManagerService _userManagerService;
 
         public HomeController(
             IBusinessRuleService businessRuleService,
-            IUserManagerApiService userManagerApiService)
+            IUserManagerService userManagerService)
         {
             _businessRuleService = businessRuleService;
-            _userManagerApiService = userManagerApiService;
+            _userManagerService = userManagerService;
         }
 
         [HttpGet]
@@ -30,7 +30,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             // Check if admin users are found
-            var respAdminUsers = await _userManagerApiService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
+            var respAdminUsers = await _userManagerService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
             if (respAdminUsers.List == null || respAdminUsers.List.Count == 0)
                 return LocalRedirect("/RegisterAdmin");
 
@@ -103,7 +103,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> RegisterAdmin()
         {
             // Check if admin users are found
-            var respAdminUsers = await _userManagerApiService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
+            var respAdminUsers = await _userManagerService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
             if (respAdminUsers.List == null || respAdminUsers.List.Count == 0)
                 return View("RegisterAdmin");
             return NotFound();
@@ -115,7 +115,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> RegisterAdmin(RegisterAdminViewModel model)
         {
             // Check if admin users are found
-            var respAdminUsers = await _userManagerApiService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
+            var respAdminUsers = await _userManagerService.GetUsersInRoleAsync(SecurityApiConstants.ROLE_ADMIN_NAME);
             if (respAdminUsers.List != null && respAdminUsers.List.Count > 0)
                 return NotFound();
 
@@ -134,11 +134,11 @@ namespace WebApp.Controllers
             }
 
             // Find the user
-            var respUser = await _userManagerApiService.FindByEmailAsync(model.Email);
+            var respUser = await _userManagerService.FindByEmailAsync(model.Email);
             if (respUser.Item != null)
             {
                 //Log in the user automatically
-                await _userManagerApiService.SignInAsync(respUser.Item.StorageKey, true);
+                await _userManagerService.SignInAsync(respUser.Item.StorageKey, true);
             }
 
             // Go back to home page
