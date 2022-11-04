@@ -81,6 +81,8 @@ This example demonstrates how to build a complete SERVICE BRICK along with all s
 The ExampleBrick microservice simply manages Products and Categories.
 It is built using our layered design and includes our Xunit Test projects for all providers.
 
+![ExampleBrick Solution](https://github.com/holomodular/ServiceBrick/blob/main/Examples/ExampleBrick/Solution.png)
+
 ### Running the Application
 
 The ExampleBrick.sln is setup to start the web application on port 7000.
