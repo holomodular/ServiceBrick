@@ -4,7 +4,7 @@
 
 This page contains examples using the SERVICE BRICK platform.
 
-## Before You Begin
+## Notes For All Examples
 
 ### Storage Providers
 
@@ -19,39 +19,38 @@ When starting the web application, a register admin screen will appear with thes
 Just click the submit button to use the default values so the client application can connect with default values.
 Otherwise, change the client appsettings.json file to use your values.
 
-## WebAppStarterTemplate
 
-This is a basic, barebone web application with a few common development configurations setup for use with Swagger.
-It is a generic web app that is used with all of our web app examples.
-
-
-## SingleHostSingleDatabase
+## SingleHostSingleDatabase Example
 
 This example demonstrates how to host the SERVICE BRICK platform in a single web application
 and all Service Brick Modules are configured to store their data into the same database (same provider).
 This example uses the InMemory Service Bus Brick for asynchronous communication for all microservices.
 
+![SingleHostSingleDatabase Diagram](https://github.com/holomodular/ServiceBrick/blob/main/Examples/SingleHostSingleDatabase/Diagram.png) 
+
 ### Running the Application
 
 The SingleHostSingleDatabase.sln is setup to start the web application on port 7000.
-When the first page is deplayed to create an administrative user, click the Submit button to use the default values.
+When the first page is displayed to create an administrative user, click the Submit button to use the default values.
 Open the client.sln solution to open the client console application. 
 The client application demonstrates how to create, update, get, query and delete objects for each microservice.
 
-## SingleHostMultipleDatabases
+## SingleHostMultipleDatabases Example
 
 This example demonstrates how to host the SERVICE BRICK platform in a single web application
 and all Service Brick Modules are configured to store their data into their own independent database.
 This example uses the InMemory Service Bus Brick for asynchronous communication for all microservices.
 
+![SingleHostMultipleDatabases Diagram](https://github.com/holomodular/ServiceBrick/blob/main/Examples/SingleHostMultipleDatabases/Diagram.png)
+
 ### Running the Application
 
 The SingleHostMultipleDatabases.sln is setup to start the web application on port 7000.
-When the first page is deplayed to create an administrative user, click the Submit button to use the default values.
+When the first page is displayed to create an administrative user, click the Submit button to use the default values.
 Open the client.sln solution to open the client console application. 
 The client application demonstrates how to create, update, get, query and delete objects for each microservice.
 
-## DistributedDeployment
+## DistributedDeployment Example
 
 This example demonstrates how to host the SERVICE BRICK platform in a distributed deployment.
 Each Microservice is contained within its own web application and its own port.
@@ -68,6 +67,8 @@ config value with your value. Additionally, you can also use Azure Standard/Adva
 To use topics and subscriptions, change the (3) three startup methods for AddBrickServiceBusAzure, RegisterBrickServiceBusAzure, and StartBrickServiceBusAzure
 to be the following: AddBrickServiceBusAzureAdvanced, RegisterBrickServiceBusAzureAdvanced, StartBrickServiceBusAzureAdvanced
 
+![DistributedDeployment Diagram](https://github.com/holomodular/ServiceBrick/blob/main/Examples/DistributedDeployment/Diagram.png)
+
 ### Running the Application
 The solution is setup to start multiple web applications at the same time.
 Go to the Security Service browser (port 7000) and click the Submit button to create an ADMIN user.
@@ -83,7 +84,13 @@ It is built using our layered design and includes our Xunit Test projects for al
 ### Running the Application
 
 The ExampleBrick.sln is setup to start the web application on port 7000.
-When the first page is deplayed to create an administrative user, click the Submit button to use the default values.
+When the first page is displayed to create an administrative user, click the Submit button to use the default values.
 Open the client.sln solution to open the client console application. 
 The client application demonstrates how to create, update, get, query and delete objects for each microservice.
+
+
+## WebAppStarterTemplate Example
+
+This is a basic, barebone web application with a few common development configurations setup for use with Swagger.
+It does not include any SERVICE BRICK components and is a generic web app that is used with all of our examples and included here just for reference.
 
