@@ -12,9 +12,6 @@ namespace Example.EntityFrameworkCore
     {
         private DbContextOptions<ExampleContext> _options = null;
 
-        /// <summary>
-        /// Constructor.
-        /// </summary>
         public ExampleContext()
         {
             var configBuider = new ConfigurationBuilder();

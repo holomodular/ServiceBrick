@@ -37,7 +37,7 @@ namespace Example.EntityFrameworkCore
             int categoryId;
             if (!int.TryParse(categoryStorageKey, out categoryId))
             {
-                response.AddMessage(ResponseMessage.CreateError("Invalid productStorageKey"));
+                response.AddMessage(ResponseMessage.CreateError("Invalid categoryStorageKey"));
                 return response;
             }
 
