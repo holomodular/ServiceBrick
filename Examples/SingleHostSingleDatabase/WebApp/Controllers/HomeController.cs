@@ -120,10 +120,9 @@ namespace WebApp.Controllers
                 return NotFound();
 
             // Create admin user process
-            ApplicationUserRegisterAdminProcess processRegisterAdmin = new ApplicationUserRegisterAdminProcess(
+            UserRegisterAdminProcess processRegisterAdmin = new UserRegisterAdminProcess(
                 model.Email,
-                model.Password,
-                TimezoneService.DefaultTimezoneName());
+                model.Password);
 
             // Execute the process
             var respEvent = await _businessRuleService.ExecuteProcessAsync(processRegisterAdmin);

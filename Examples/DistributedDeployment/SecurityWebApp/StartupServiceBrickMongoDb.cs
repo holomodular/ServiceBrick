@@ -106,10 +106,6 @@ namespace WebApp
             // Service Brick Core
             app.StartBrickCore();
 
-            // Service Bus Brick
-            app.StartBrickServiceBusAzure();
-            app.StartBrickServiceBus();
-
             // Logging Brick
             app.StartBrickLoggingApi();
             app.StartBrickLoggingMongoDb();
@@ -120,6 +116,10 @@ namespace WebApp
             app.StartBrickSecurityApiController();
             app.StartBrickSecurityMongoDb();
             app.StartBrickSecurity();
+
+            // Service Bus Brick
+            app.StartBrickServiceBusAzure();
+            app.StartBrickServiceBus();
 
             // Custom Website
             if (WebHostEnvironment != null)

@@ -141,10 +141,6 @@ namespace WebApp
             // Service Brick Core
             app.StartBrickCore();
 
-            // Service Bus Brick
-            app.StartBrickServiceBusInMemory();
-            app.StartBrickServiceBus();
-
             // Logging Brick
             app.StartBrickLoggingApi();
             app.StartBrickLoggingApiController();
@@ -168,6 +164,10 @@ namespace WebApp
             app.StartBrickSecurityApiController();
             app.StartBrickSecurityEntityFrameworkCore();
             app.StartBrickSecurity();
+
+            // Service Bus Brick
+            app.StartBrickServiceBusInMemory();
+            app.StartBrickServiceBus();
 
             // Custom Website
             if (WebHostEnvironment != null)

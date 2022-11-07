@@ -70,7 +70,7 @@ to be the following: AddBrickServiceBusAzureAdvanced, RegisterBrickServiceBusAzu
 ![DistributedDeployment Diagram](https://github.com/holomodular/ServiceBrick/blob/main/Examples/DistributedDeployment/Diagram.png)
 
 ### Running the Application
-The solution is setup to start multiple web applications at the same time.
+Right click the solution, select properties and select "Multiple Startup Projects" and set each project to "Start" to start multiple web applications at the same time.
 Go to the Security Service browser (port 7000) and click the Submit button to create an ADMIN user.
 Open the client.sln solution to open the client console application. 
 The client application demonstrates how to create, update, get, query and delete objects for each microservice.
